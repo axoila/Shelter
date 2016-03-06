@@ -1,0 +1,245 @@
+<html>
+    <head>
+        <title>shelter</title>
+        <style>
+            div {
+                background-size: 100%;
+
+                image-rendering: optimizeSpeed;
+                image-rendering: -moz-crisp-edges;
+                image-rendering: -webkit-optimize-contrast;
+                image-rendering: optimize-contrast;
+                image-rendering: pixelated;
+                -ms-interpolation-mode: nearest-neighbor;
+            }
+            body{
+                margin:0px 0px 0px 0px;
+            }
+            #game{
+                zoom: 6;
+                -moz-transform: scale(6);
+            }
+            #background{
+                background: brown url(images/background.png);
+                width: 128px;
+                height:96px;
+                top:0px;
+                left:0px;
+            }
+            #foreground{
+                background: url(images/foreground.png);
+                width: 128px;
+                height:96px;
+                position:absolute;
+                top:0;
+                left:0;
+            }
+            .fig{
+                width:8px;
+                height:8px;
+                margin-bottom:-8px;
+            }
+            .person{
+                width:8px;
+                height:8px;
+                position:absolute;
+                background:transparent;
+                display: inline-block;
+            }
+            .skin{
+                -webkit-mask-image: url(images/skin.png);
+                background:white;
+            }
+            .clothes{
+                -webkit-mask-image: url(images/clothes.png);
+                background:darkblue;
+            }
+            .shoes{
+                -webkit-mask-image: url(images/shoes.png);
+                background:brown;
+            }
+            .hair{
+                -webkit-mask-image: url(images/hair.png);
+                background:red;
+            }
+            .eyes{
+                -webkit-mask-image: url(images/eyes.png);
+                background:blue;
+            }
+            .beard{
+                -webkit-mask-image: url(images/beard.png);
+                background:darkred;
+            }
+            .name{
+                margin-left: 8px;
+                margin-top: -1px;
+                background-color: transparent;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="game">
+            <div id="background">
+                <div id="room">
+                    <div id="per person0" class="person" style="left:18px; top:75px;">
+                        <div class="fig skin"></div>
+                        <div class="fig clothes"></div>
+                        <div class="fig shoes"></div>
+                        <div class="fig hair"></div>
+                        <div class="fig eyes"></div>
+                        <div class="fig beard"></div>
+                    </div>
+                    <div id="per person1" class="person" style="left:12px; top:11px;">
+                        <div class="fig skin"></div>
+                        <div class="fig clothes"></div>
+                        <div class="fig shoes"></div>
+                        <div class="fig hair"></div>
+                        <div class="fig eyes"></div>
+                        <div class="fig beard"></div>
+                    </div>
+                    <div id="per person2" class="person" style="left:20px; top:11px;">
+                        <div class="fig skin"></div>
+                        <div class="fig clothes"></div>
+                        <div class="fig shoes"></div>
+                        <div class="fig hair"></div>
+                        <div class="fig eyes"></div>
+                        <div class="fig beard"></div>
+                    </div>
+                    <div id="per person3" class="person" style="left:28px; top:11px;">
+                        <div class="fig skin"></div>
+                        <div class="fig clothes"></div>
+                        <div class="fig shoes"></div>
+                        <div class="fig hair"></div>
+                        <div class="fig eyes"></div>
+                        <div class="fig beard"></div>
+                    </div>
+                    <div id="per person4" class="person" style="left:52px; top:14px;">
+                        <div class="fig skin"></div>
+                        <div class="fig clothes"></div>
+                        <div class="fig shoes"></div>
+                        <div class="fig hair"></div>
+                        <div class="fig eyes"></div>
+                        <div class="fig beard"></div>
+                    </div>
+                    <div id="per person5" class="person" style="left:61px; top:22px;">
+                        <div class="fig skin"></div>
+                        <div class="fig clothes"></div>
+                        <div class="fig shoes"></div>
+                        <div class="fig hair"></div>
+                        <div class="fig eyes"></div>
+                        <div class="fig beard"></div>
+                    </div>
+                    <div id="per person6" class="person" style="left:24px; top:44px;">
+                        <div class="fig skin"></div>
+                        <div class="fig clothes"></div>
+                        <div class="fig shoes"></div>
+                        <div class="fig hair"></div>
+                        <div class="fig eyes"></div>
+                        <div class="fig beard"></div>
+                    </div>
+                    <div id="per person7" class="person" style="left:60px; top:43px;">
+                        <div class="fig skin"></div>
+                        <div class="fig clothes"></div>
+                        <div class="fig shoes"></div>
+                        <div class="fig hair"></div>
+                        <div class="fig eyes"></div>
+                        <div class="fig beard"></div>
+                    </div>
+                    <div id="per person8" class="person" style="left:60px; top:66px">
+                        <div class="fig skin"></div>
+                        <div class="fig clothes"></div>
+                        <div class="fig shoes"></div>
+                        <div class="fig hair"></div>
+                        <div class="fig eyes"></div>
+                        <div class="fig beard"></div>
+                    </div>
+                    <div id="foreground"></div>
+                </div>
+                <div id="list">
+                    <div id="list0" class="person" style="left:81px; top:4px;">
+                        <div class="fig skin"></div>
+                        <div class="fig clothes"></div>
+                        <div class="fig shoes"></div>
+                        <div class="fig hair"></div>
+                        <div class="fig eyes"></div>
+                        <div class="fig beard"></div>
+                        <canvas class="name"></canvas>
+                    </div>
+                    <div id="list1" class="person" style="left:81px; top:14px;">
+                        <div class="fig skin"></div>
+                        <div class="fig clothes"></div>
+                        <div class="fig shoes"></div>
+                        <div class="fig hair"></div>
+                        <div class="fig eyes"></div>
+                        <div class="fig beard"></div>
+                        <canvas class="name"></canvas>
+                    </div>
+                    <div id="list2" class="person" style="left:81px; top:24px;">
+                        <div class="fig skin"></div>
+                        <div class="fig clothes"></div>
+                        <div class="fig shoes"></div>
+                        <div class="fig hair"></div>
+                        <div class="fig eyes"></div>
+                        <div class="fig beard"></div>
+                        <canvas class="name"></canvas>
+                    </div>
+                    <div id="list3" class="person" style="left:81px; top:34px;">
+                        <div class="fig skin"></div>
+                        <div class="fig clothes"></div>
+                        <div class="fig shoes"></div>
+                        <div class="fig hair"></div>
+                        <div class="fig eyes"></div>
+                        <div class="fig beard"></div>
+                        <canvas class="name"></canvas>
+                    </div>
+                    <div id="list4" class="person" style="left:81px; top:44px;">
+                        <div class="fig skin"></div>
+                        <div class="fig clothes"></div>
+                        <div class="fig shoes"></div>
+                        <div class="fig hair"></div>
+                        <div class="fig eyes"></div>
+                        <div class="fig beard"></div>
+                        <canvas class="name"></canvas>
+                    </div>
+                    <div id="list5" class="person" style="left:81px; top:54px;">
+                        <div class="fig skin"></div>
+                        <div class="fig clothes"></div>
+                        <div class="fig shoes"></div>
+                        <div class="fig hair"></div>
+                        <div class="fig eyes"></div>
+                        <div class="fig beard"></div>
+                        <canvas class="name"></canvas>
+                    </div>
+                    <div id="list6" class="person" style="left:81px; top:64px;">
+                        <div class="fig skin"></div>
+                        <div class="fig clothes"></div>
+                        <div class="fig shoes"></div>
+                        <div class="fig hair"></div>
+                        <div class="fig eyes"></div>
+                        <div class="fig beard"></div>
+                        <canvas class="name"></canvas>
+                    </div>
+                    <div id="list7" class="person" style="left:81px; top:74px;">
+                        <div class="fig skin"></div>
+                        <div class="fig clothes"></div>
+                        <div class="fig shoes"></div>
+                        <div class="fig hair"></div>
+                        <div class="fig eyes"></div>
+                        <div class="fig beard"></div>
+                        <canvas class="name"></canvas>
+                    </div>
+                    <div id="list8" class="person" style="left:81px; top:84px;">
+                        <div class="fig skin"></div>
+                        <div class="fig clothes"></div>
+                        <div class="fig shoes"></div>
+                        <div class="fig hair"></div>
+                        <div class="fig eyes"></div>
+                        <div class="fig beard"></div>
+                        <canvas class="name"></canvas>
+                    </div>
+                    <script src="canvastext.js"></script>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
